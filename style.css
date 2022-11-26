@@ -20,7 +20,6 @@ li {
 }
 
 .dashboard-container {
-    /* border: solid red; */
     display: grid;
     grid-auto-columns: 1fr;
     grid-template-areas: 
@@ -32,9 +31,6 @@ li {
 
 
 body {
-    /* display: grid; */
-    /* place-content: center;
-    min-height: 100vh; */
     font-family: var(--ff-primary);
     font-weight: var(--fw-400);
     background-color: hsl(var(--clr-neutral-200));
@@ -46,7 +42,6 @@ body {
 /* Sidebar */
 
 .sidebar {
-    /* border: solid rgb(64, 64, 241); */
     grid-area: sidebar;
     height: 100vh;
     background-color: rgb(2, 46, 66);
@@ -58,7 +53,6 @@ body {
     justify-content: center;
     align-items: center;
     padding: 50px;
-    /* border: solid white; */
 }
 
 #icon-heading img {
@@ -97,7 +91,6 @@ body {
     margin-left: 50px;
     text-decoration: none;
     color: white;
-    /* border: solid green; */
 }
 
 
@@ -105,7 +98,6 @@ body {
 
 .header {
     display: grid;
-    /* border: solid green; */
     padding: 20px;
     grid-area: header;
     background-color: #FAFAF9;
@@ -118,7 +110,6 @@ body {
     padding: 0 50px 0 50px;
     justify-content: space-between;
     align-items: center;
-    /* border: solid green; */
 }
 
 .search-container {
@@ -126,7 +117,6 @@ body {
     align-items: center;
     justify-content: space-between;
     height: 50%;
-    /* border: solid red; */
 }
 
 .search-container form, input {
@@ -136,7 +126,6 @@ body {
 }
 
 .search-container button {
-    /* border: solid red; */
     padding: 10px;
     margin-right: 80px;
 }
@@ -144,7 +133,6 @@ body {
 .nav-buttons ul {
     display: flex;
     gap: 20px;
-    /* border: solid red; */
 }
 
 .nav-buttons a {
@@ -154,7 +142,6 @@ body {
     padding: 10px;
     background-color: rgb(11, 58, 42);
     border-radius: 8%;
-    /* border: solid green; */
 }
 
 .nav-buttons a:hover {
@@ -168,7 +155,6 @@ body {
     align-items: center;
     gap: 10px;
     height: 50%;
-    /* border: solid black; */
 }
 
 #picture img {
@@ -176,7 +162,6 @@ body {
 }
 
 .logo-greeting {
-    /* border: solid green; */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -203,7 +188,6 @@ body {
     grid-area: main-content;
     background-color: #E7E5E4;
     padding-top: 50px;
-    /* border: solid green; */
 }
 
 
@@ -212,7 +196,6 @@ body {
     margin-left: 70px;
     font-size: 28px;
     font-weight: 800;
-    /* border: solid green; */
 }
 
   
@@ -254,10 +237,7 @@ body {
     background-color: red;
     color: white;
   }
-  .trending-block {
-    background-color: red;
-    color: white;
-  }
+  
 
 .announcement-trending-heading {
     font-size: 22px;
@@ -269,8 +249,6 @@ body {
   .my-project-grid {
     display: grid;
     gap: 1.5rem;
-    /* grid-template-columns: repeat(4, 1fr); */
-
     padding-block: 2rem;
     width: min(95%, 85.5rem);
     margin-inline: auto;
@@ -285,8 +263,6 @@ body {
     'announcement-trending';
 
     grid-template-rows: auto;
-    /* border: solid green; */
-
   }
 
   .my-project-grid img {
@@ -307,13 +283,53 @@ body {
     gap: 1.5rem;
   }
 
+  .name {
+    display: flex;
+  }
+
+  .position {
+    display: flex;
+    text-align: start;
+  }
 
 
+/* Social */
+
+/* https://freefrontend.com/css-social-media-icons/ */
+
+ /* Style all font social media icons */
 
 
+ .trending-block {
+    background-color: red;
+    color: white;
+  }
 
+.trending-block .position {
+  display: grid;
+}
 
+.trending-picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3px;
+}
 
+  .trending-picture img {
+    max-width: 60px;
+    padding: 0;
+    /* inverts the colour */
+    -webkit-filter: invert(100%);
+}
+
+.trending-text #name {
+  font-size: 12px;
+}
+
+.trending-text #title {
+  font-size: 15px;
+}
 
 
 @media (min-width: 50em) {
@@ -325,8 +341,8 @@ body {
     }
     .my-project-grid {
         grid-template-areas: 
-        'block1 block2 block3 announcement-trending'
-        'block4 block5 block6 announcement-trending'
+        'block1 block1 block2 block2 block3 block3 announcement-trending'
+        'block4 block4 block5 block5 block6 block6 announcement-trending'
     }
   
   }
